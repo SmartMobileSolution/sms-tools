@@ -19,6 +19,7 @@ Official website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
 | Kids Safe Privacy Policy (English) | `/privacy/kids-safe/` |
 | Kids Safe Privacy Policy (Vietnamese) | `/privacy/kids-safe/vi/` |
 | App Locker Privacy Policy (English) | `/privacy/app-locker/` |
+| App Locker Google Play listing | `org.app.secure.locker` |
 
 ## Project structure
 
@@ -47,7 +48,10 @@ Official website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
 │   └── images/
 │       ├── company-logo.png
 │       ├── kids-safe-icon.svg
-│       └── app-locker-icon.webp
+│       ├── app-locker-icon.webp
+    │       └── app-locker/
+    │           └── screenshots/
+    │               ├── screen-01.webp … screen-05.webp
 └── docs/
     └── Website_Handover_Smart_Mobile_Solution.md
 ```

@@ -165,7 +165,8 @@ Sao chép prompt sau và gửi kèm file bàn giao này trong cuộc trò chuy�
 - Its English Privacy Policy is `/privacy/app-locker/`; no Vietnamese version has been supplied or created.
 - Premium benefits shown on the detail page are: ad removal, unlimited app locking, and unlimited photo/video protection. Do not add unconfirmed technical claims such as biometric unlocking or uninstall protection.
 - App icon: `assets/images/app-locker-icon.webp`. The user's supplied 512×512 PNG remains the original source asset; the website uses the WebP derivative.
-- Google Play URL and real app screenshots have not been supplied; do not invent a download link or display placeholder screenshots.
+- Google Play URL supplied by the user: `https://play.google.com/store/apps/details?id=org.app.secure.locker` (package `org.app.secure.locker`).
+- Five promotional images are used in the App Locker detail-page gallery at `assets/images/app-locker/screenshots/screen-01.webp` through `screen-05.webp`. They are supplied marketing visuals/mockups; do not describe them as unaltered in-app captures.
 
 ## 11. Shared navigation
 
