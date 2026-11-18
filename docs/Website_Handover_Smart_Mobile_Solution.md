@@ -166,7 +166,7 @@ Sao chép prompt sau và gửi kèm file bàn giao này trong cuộc trò chuy�
 - Premium benefits shown on the detail page are: ad removal, unlimited app locking, and unlimited photo/video protection. Do not add unconfirmed technical claims such as biometric unlocking or uninstall protection.
 - App icon: `assets/images/app-locker-icon.webp`. The user's supplied 512×512 PNG remains the original source asset; the website uses the WebP derivative.
 - Google Play URL supplied by the user: `https://play.google.com/store/apps/details?id=org.app.secure.locker` (package `org.app.secure.locker`).
-- Five promotional screenshots were supplied for the App Locker detail page but are not yet published in the website gallery; do not refer to them as deployed assets until each image file is uploaded and verified.
+- Five promotional screenshots have been uploaded as PNG files at `assets/images/app-locker/screenshots/screen-01.png` through `screen-05.png` and are displayed in the responsive gallery on `/apps/app-locker/`. Each PNG is approximately 1.9–2.3 MB; images use lazy loading. Consider generating WebP derivatives in a future performance pass without replacing the user-provided PNG originals.
 
 ## 11. Shared navigation
 

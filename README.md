@@ -51,7 +51,11 @@ Official website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
 │       ├── app-locker-icon.webp
     │       └── app-locker/
     │           └── screenshots/
-    │               ├── screen-01.webp … screen-05.webp
+    │               ├── screen-01.png
+    │               ├── screen-02.png
+    │               ├── screen-03.png
+    │               ├── screen-04.png
+    │               └── screen-05.png
 └── docs/
     └── Website_Handover_Smart_Mobile_Solution.md
 ```
@@ -76,6 +80,7 @@ The site should remain easy to extend as SMS publishes more apps.
 - Company logo: `assets/images/company-logo.png`. This is the original PNG provided by the site owner. Use it as-is; do not redraw, crop, recolor, recompress, or convert it. Adjust its display size with CSS only.
 - Kids Safe icon: `assets/images/kids-safe-icon.svg`.
 - App Locker icon: `assets/images/app-locker-icon.webp`, used on Home, Apps, the App Locker detail page, and its Privacy Policy.
+- App Locker screenshots: five original PNGs in `assets/images/app-locker/screenshots/`, used in the responsive gallery on `/apps/app-locker/`.
 - Search all HTML, CSS and favicon references before renaming or replacing an image.
 
 ## Local preview
