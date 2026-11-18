@@ -14,7 +14,9 @@ Website là trang giới thiệu Smart Mobile Solution (SMS), danh sách ứng d
 ## 2. Công việc đã thực hiện
 
 - Xây dựng/chỉnh sửa trang chủ giới thiệu Smart Mobile Solution, thông điệp thương hiệu, khu vực Our Apps và các liên kết điều hướng.
-- Xây dựng/chỉnh sửa trang danh sách ứng dụng tại `/apps/`, hiện có thẻ giới thiệu **Kids Safe: Parent Control**.
+- Xây dựng/chỉnh sửa trang danh sách ứng dụng tại `/apps/`, hiện có **Kids Safe: Parent Control** và **App Locker: Lock Apps**.
+- Tạo trang giới thiệu App Locker tại `/apps/app-locker/`.
+- Tạo Privacy Directory tại `/privacy/` và Privacy Policy tiếng Anh riêng cho App Locker tại `/privacy/app-locker/`.
 - Xây dựng/chỉnh sửa trang Contact với email hỗ trợ `help.mobilesolution@gmail.com`.
 - Soạn và cập nhật Privacy Policy cho Kids Safe: Parent Control bằng tiếng Anh và tiếng Việt.
 - Tinh chỉnh giao diện dùng chung trong stylesheet: màu sắc xanh/teal, typography, card, navigation, trang policy và responsive cho màn hình nhỏ.
@@ -27,18 +29,25 @@ Website là trang giới thiệu Smart Mobile Solution (SMS), danh sách ứng d
 |---|---|
 | `index.html` | Trang chủ |
 | `apps/index.html` | Danh sách ứng dụng |
+| `apps/app-locker/index.html` | Trang giới thiệu App Locker: Lock Apps |
+| `privacy/index.html` | Danh mục Privacy Policy theo ứng dụng |
+| `privacy/app-locker/index.html` | Privacy Policy — App Locker (English) |
 | `contact/index.html` | Trang liên hệ |
 | `privacy/kids-safe/index.html` | Privacy Policy — English |
 | `privacy/kids-safe/vi/index.html` | Privacy Policy — Tiếng Việt |
 | `assets/css/styles.css` | Stylesheet dùng chung, responsive |
 | `assets/js/site.js` | JavaScript dùng chung; hiện được gọi ở cuối các trang để hỗ trợ tiện ích website như năm ở footer |
 | `assets/images/company-logo.png` | Logo công ty dạng PNG do người dùng upload/commit; HTML hiện trỏ đến file này |
-| `assets/images/kids-safe-icon.svg` | Icon Kids Safe đang được hai trang Home và Apps tham chiếu |
+| `assets/images/kids-safe-icon.svg` | Icon Kids Safe đang được Home, Apps và Privacy Directory tham chiếu |
+| `assets/images/app-locker-icon.webp` | Icon App Locker dùng trên Home, Apps, Detail và Privacy Policy |
 
 ### Các URL hiện có
 
 - Home: https://smartmobilesolution.github.io/sms-tools/
 - Apps: https://smartmobilesolution.github.io/sms-tools/apps/
+- App Locker Detail: https://smartmobilesolution.github.io/sms-tools/apps/app-locker/
+- Privacy Directory: https://smartmobilesolution.github.io/sms-tools/privacy/
+- App Locker Privacy EN: https://smartmobilesolution.github.io/sms-tools/privacy/app-locker/
 - Contact: https://smartmobilesolution.github.io/sms-tools/contact/
 - Privacy EN: https://smartmobilesolution.github.io/sms-tools/privacy/kids-safe/
 - Privacy VI: https://smartmobilesolution.github.io/sms-tools/privacy/kids-safe/vi/
@@ -149,7 +158,22 @@ Sao chép prompt sau và gửi kèm file bàn giao này trong cuộc trò chuy�
 5. Yêu cầu agent xác nhận đã đọc tài liệu, kiểm tra repository/branch hiện tại và tóm tắt trạng thái thật trước khi thực hiện thay đổi.
 6. Với agent chạy local, yêu cầu clone repository, checkout `main`, kiểm tra source và commit gần nhất trước khi code. Không gửi token, mật khẩu hoặc thông tin bí mật trong prompt.
 
-## 10. Thông tin liên hệ website
+## 10. App Locker: Lock Apps — current website status
+
+- App Locker is listed on Home and Apps.
+- Its detail page is `/apps/app-locker/`.
+- Its English Privacy Policy is `/privacy/app-locker/`; no Vietnamese version has been supplied or created.
+- Premium benefits shown on the detail page are: ad removal, unlimited app locking, and unlimited photo/video protection. Do not add unconfirmed technical claims such as biometric unlocking or uninstall protection.
+- App icon: `assets/images/app-locker-icon.webp`. The user's supplied 512×512 PNG remains the original source asset; the website uses the WebP derivative.
+- Google Play URL and real app screenshots have not been supplied; do not invent a download link or display placeholder screenshots.
+
+## 11. Shared navigation
+
+- The global Privacy navigation points to `/privacy/`.
+- The Privacy Directory links each app to its own policy.
+- Kids Safe retains English and Vietnamese policy pages; App Locker currently has English only.
+
+## 12. Thông tin liên hệ website
 
 - Brand: Smart Mobile Solution (SMS)
 - Support: `help.mobilesolution@gmail.com`

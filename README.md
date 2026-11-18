@@ -16,6 +16,7 @@ Official website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
 | Contact | `/contact/` |
 | Kids Safe Privacy Policy (English) | `/privacy/kids-safe/` |
 | Kids Safe Privacy Policy (Vietnamese) | `/privacy/kids-safe/vi/` |
+| App Locker Privacy Policy (English) | `/privacy/app-locker/` |
 
 ## Project structure
 
@@ -23,10 +24,15 @@ Official website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
 .
 ├── index.html
 ├── apps/
-│   └── index.html
+│   ├── index.html
+│   └── app-locker/
+│       └── index.html
 ├── contact/
 │   └── index.html
 ├── privacy/
+│   ├── index.html
+│   ├── app-locker/
+│   │   └── index.html
 │   └── kids-safe/
 │       ├── index.html
 │       └── vi/
@@ -38,7 +44,8 @@ Official website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
 │   │   └── site.js
 │   └── images/
 │       ├── company-logo.png
-│       └── kids-safe-icon.svg
+│       ├── kids-safe-icon.svg
+│       └── app-locker-icon.webp
 └── docs/
     └── Website_Handover_Smart_Mobile_Solution.md
 ```
@@ -53,7 +60,8 @@ The site should remain easy to extend as SMS publishes more apps.
 - Give every app a stable lowercase slug, such as `kids-safe`.
 - Use a consistent structure for each app card: name, icon, platform, short description, tags, app-page URL and privacy-policy URL.
 - Add an app landing page at `/apps/<app-slug>/` when an app needs its own detail page.
-- Add the English privacy policy at `/privacy/<app-slug>/` and Vietnamese at `/privacy/<app-slug>/vi/`.
+- Add the English privacy policy at `/privacy/<app-slug>/`; add a Vietnamese version at `/privacy/<app-slug>/vi/` only when supplied and approved.
+- Keep `/privacy/` as the directory linking to each app's available policy language(s).
 - As the app catalogue grows, prefer a central metadata source (for example, `assets/data/apps.json`) and shared page templates/partials over duplicated card markup. Keep any implementation compatible with the GitHub Pages hosting setup.
 - Keep English and Vietnamese privacy pages aligned in meaning and navigation. Do not copy a policy to another app without checking that app's actual data practices and SDKs.
 
