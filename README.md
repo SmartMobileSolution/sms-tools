@@ -13,6 +13,8 @@ Official website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
 |---|---|
 | Home | `/` |
 | App directory | `/apps/` |
+| App Locker detail | `/apps/app-locker/` |
+| Privacy directory | `/privacy/` |
 | Contact | `/contact/` |
 | Kids Safe Privacy Policy (English) | `/privacy/kids-safe/` |
 | Kids Safe Privacy Policy (Vietnamese) | `/privacy/kids-safe/vi/` |
@@ -68,7 +70,8 @@ The site should remain easy to extend as SMS publishes more apps.
 ## Brand assets
 
 - Company logo: `assets/images/company-logo.png`. This is the original PNG provided by the site owner. Use it as-is; do not redraw, crop, recolor, recompress, or convert it. Adjust its display size with CSS only.
-- Kids Safe icon currently referenced by Home and Apps: `assets/images/kids-safe-icon.svg`. Inspect the actual asset before changing it; do not assume it is the original uploaded PNG.
+- Kids Safe icon: `assets/images/kids-safe-icon.svg`.
+- App Locker icon: `assets/images/app-locker-icon.webp`, used on Home, Apps, the App Locker detail page, and its Privacy Policy.
 - Search all HTML, CSS and favicon references before renaming or replacing an image.
 
 ## Local preview
