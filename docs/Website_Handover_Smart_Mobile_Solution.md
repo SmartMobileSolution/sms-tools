@@ -208,8 +208,9 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 
 - Repository: `SmartMobileSolution/sms-tools`.
 - Branch: `main`.
-- Verified HEAD at this handoff update: `041a961de459a9656411134bcd18fe6aa7555a14` — `Align Kids Safe home card with App Locker`.
-- GitHub Pages workflow run #48 completed with conclusion `success` for the same commit: https://github.com/SmartMobileSolution/sms-tools/actions/runs/44338980484.
+- Website source/content baseline: `041a961de459a9656411134bcd18fe6aa7555a14` — `Align Kids Safe home card with App Locker`; GitHub Pages workflow #48 completed with conclusion `success` for this website version: https://github.com/SmartMobileSolution/sms-tools/actions/runs/44338980484.
+- Documentation-only handoff update: `b6bf3fbb7e6e203dd041ce0934dc284c936986bc` — `Update website documentation and handoff`. This is the repository HEAD at the time this section was prepared.
+- GitHub Pages workflow #49 was triggered by the documentation commit and was still `in_progress` at the last check: https://github.com/SmartMobileSolution/sms-tools/actions/runs/44340526375. It should be checked before claiming the documentation commit's Pages workflow is complete; website source was not changed by that documentation-only commit.
 - Live website: https://smartmobilesolution.github.io/sms-tools/.
 - Home: https://smartmobilesolution.github.io/sms-tools/.
 - Apps directory: https://smartmobilesolution.github.io/sms-tools/apps/.
