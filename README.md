@@ -1,15 +1,16 @@
 # Smart Mobile Solution (SMS) — Website
 
-Official website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
+Official static website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
 
 - **Live website:** https://smartmobilesolution.github.io/sms-tools/
 - **Repository:** https://github.com/SmartMobileSolution/sms-tools
 - **Default branch:** `main`
 - **Support:** help.mobilesolution@gmail.com
+- **Last documented:** 18 November 2026
 
-## Website sections
+## Website pages
 
-| Section | Path |
+| Section | Path / URL |
 |---|---|
 | Home | `/` |
 | App directory | `/apps/` |
@@ -19,7 +20,15 @@ Official website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
 | Kids Safe Privacy Policy (English) | `/privacy/kids-safe/` |
 | Kids Safe Privacy Policy (Vietnamese) | `/privacy/kids-safe/vi/` |
 | App Locker Privacy Policy (English) | `/privacy/app-locker/` |
-| App Locker Google Play listing | `org.app.secure.locker` |
+
+## Published apps
+
+| App | Google Play | Website detail | Privacy Policy |
+|---|---|---|---|
+| Kids Safe: Parent Control | [Google Play](https://play.google.com/store/apps/details?id=org.app.kidsmode) · package `org.app.kidsmode` | No dedicated detail page currently; listed on Home and Apps | English and Vietnamese |
+| App Locker: Lock Apps | [Google Play](https://play.google.com/store/apps/details?id=org.app.secure.locker) · package `org.app.secure.locker` | [App Locker detail](/apps/app-locker/) | English only |
+
+Google Play URLs were supplied by the site owner. Do not infer or invent additional store links.
 
 ## Project structure
 
@@ -49,72 +58,81 @@ Official website for **Smart Mobile Solution (SMS)**, hosted with GitHub Pages.
 │       ├── company-logo.png
 │       ├── kids-safe-icon.svg
 │       ├── app-locker-icon.webp
-    │       └── app-locker/
-    │           └── screenshots/
-    │               ├── screen-01.png
-    │               ├── screen-02.png
-    │               ├── screen-03.png
-    │               ├── screen-04.png
-    │               └── screen-05.png
+│       └── app-locker/
+│           └── screenshots/
+│               ├── screen-01.png
+│               ├── screen-02.png
+│               ├── screen-03.png
+│               ├── screen-04.png
+│               └── screen-05.png
 └── docs/
     └── Website_Handover_Smart_Mobile_Solution.md
 ```
 
-This is currently a lightweight static website built with HTML, CSS and JavaScript. Do not assume a frontend framework, package manager, or build pipeline unless one is deliberately introduced and documented.
+This is a lightweight static website built with HTML, CSS and JavaScript. There is no documented frontend framework, package manager, or separate build pipeline. GitHub Pages deploys the static site.
+
+## Current implementation notes
+
+- The Home page lists Kids Safe and App Locker using the shared `.app-card` styling. The Kids Safe Home card includes its Google Play link and Privacy Policy link. The App Locker Home card links to its detail page and Privacy Policy.
+- The Apps directory lists both apps. Kids Safe currently has no dedicated detail page; App Locker does.
+- App Locker's detail page contains a five-image promotional screenshot gallery. The original PNG files are stored under `assets/images/app-locker/screenshots/`; the gallery uses lazy loading and responsive columns.
+- App Locker's hero icon is displayed directly without an outer decorative card, frame, background panel, or glow layer.
+- The App Locker Google Play CTA and the Kids Safe Home Google Play link open their respective supplied Play Store URLs in a new tab.
+- Each app has its own Privacy Policy URL. Do not copy one app's policy to another app without verifying that app's actual data practices and SDKs.
 
 ## Extending the website
 
-The site should remain easy to extend as SMS publishes more apps.
-
 - Keep `/apps/` as the central app directory.
 - Give every app a stable lowercase slug, such as `kids-safe`.
-- Use a consistent structure for each app card: name, icon, platform, short description, tags, app-page URL and privacy-policy URL.
-- Add an app landing page at `/apps/<app-slug>/` when an app needs its own detail page.
-- Add the English privacy policy at `/privacy/<app-slug>/`; add a Vietnamese version at `/privacy/<app-slug>/vi/` only when supplied and approved.
+- Use a consistent card structure: app name, icon, platform/category, short description, tags, and only the actions/links that exist for that app (Google Play, detail page, Privacy Policy).
+- Add `/apps/<app-slug>/` when an app needs its own landing/detail page. Do not create a placeholder page merely because another app has one.
+- Add an English Privacy Policy at `/privacy/<app-slug>/`; add `/privacy/<app-slug>/vi/` only when a Vietnamese version is supplied and approved.
 - Keep `/privacy/` as the directory linking to each app's available policy language(s).
-- As the app catalogue grows, prefer a central metadata source (for example, `assets/data/apps.json`) and shared page templates/partials over duplicated card markup. Keep any implementation compatible with the GitHub Pages hosting setup.
-- Keep English and Vietnamese privacy pages aligned in meaning and navigation. Do not copy a policy to another app without checking that app's actual data practices and SDKs.
+- As the catalogue grows, consider a central metadata source (for example, `assets/data/apps.json`) and shared templates/partials to reduce duplicated card markup. This is a future improvement, not an existing implementation. Any such change must remain compatible with GitHub Pages.
+- Keep English and Vietnamese privacy pages aligned in meaning and navigation. Do not add unconfirmed data collection, processing, SDK, consent, or legal-compliance claims.
 
-## Brand assets
+## Brand and image assets
 
-- Company logo: `assets/images/company-logo.png`. This is the original PNG provided by the site owner. Use it as-is; do not redraw, crop, recolor, recompress, or convert it. Adjust its display size with CSS only.
-- Kids Safe icon: `assets/images/kids-safe-icon.svg`.
+- Company logo: `assets/images/company-logo.png`. This is the site owner's original PNG. Use it as-is; do not redraw, crop, recolor, recompress, or convert it. Adjust display size with CSS only.
+- Kids Safe icon: `assets/images/kids-safe-icon.svg`. Verify the actual file before replacing it; the handover notes that it may be an SVG wrapper around raster artwork, not the original editable vector.
 - App Locker icon: `assets/images/app-locker-icon.webp`, used on Home, Apps, the App Locker detail page, and its Privacy Policy.
-- App Locker screenshots: five original PNGs in `assets/images/app-locker/screenshots/`, used in the responsive gallery on `/apps/app-locker/`.
-- Search all HTML, CSS and favicon references before renaming or replacing an image.
+- App Locker screenshots: five owner-provided PNG files at `assets/images/app-locker/screenshots/screen-01.png` through `screen-05.png`. Preserve the originals unless the owner asks otherwise. WebP derivatives may be added as a performance optimization, but should not silently replace the source PNGs.
+- Search all HTML, CSS, favicon and JavaScript references before renaming or replacing any asset.
 
 ## Local preview
 
-No special build step is currently documented. To preview the static files locally, run a simple HTTP server from the repository root, for example:
+No special build step is required. From the repository root:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000/sms-tools/ only if serving the parent directory with the repository nested under that path; otherwise open http://localhost:8000/.
+Then open http://localhost:8000/. When the repository is served beneath a parent directory as `/sms-tools/`, use http://localhost:8000/sms-tools/ instead.
+
+## Repository working rules
+
+The site owner has authorized direct work on `SmartMobileSolution/sms-tools`: edit files and commit/push to `main` when assigned a task.
+
+- Do not merge pull requests or branches.
+- Do not change repository settings, GitHub Pages configuration, workflows, branch protection, or other repository configuration unless the owner explicitly authorizes that specific change.
+- Read the latest `main` files before editing; never assume previous notes are newer than the repository.
+- Preserve unrelated content and assets.
+- Use a descriptive commit message and verify the expected branch head before updating it.
+- Verify the GitHub Pages workflow and live website before claiming a change is published.
 
 ## Change checklist
 
-1. Read the current files on `main` before editing; this repository may have changed since earlier work.
-2. Keep unrelated layout, copy and behavior unchanged.
-3. Check relative paths at every directory depth, including images, CSS, JavaScript and favicons.
-4. Check navigation, privacy language switch links and responsive behavior.
-5. Review the diff and ensure no obsolete asset references remain.
-6. Commit with a descriptive message. Report changed files and pages that should be checked.
-7. Verify the deployed GitHub Pages site before claiming that a live change is visible.
+1. Read the current files on `main` before editing.
+2. Identify every page and asset reference affected by the task.
+3. Keep unrelated layout, copy and behavior unchanged.
+4. Check relative paths at every directory depth, including images, CSS, JavaScript and favicons.
+5. Check navigation, Privacy Policy links/language switches, external Google Play links and responsive behavior.
+6. Review the diff and ensure no obsolete asset references remain.
+7. Commit/push only within the owner's granted scope; never merge or alter repository configuration without explicit instruction.
+8. Verify the GitHub Pages deployment and inspect the live page before reporting the change as live.
 
-## Handover to another agent
+## Handover
 
-Read **[Website Handover — Smart Mobile Solution (SMS)](docs/Website_Handover_Smart_Mobile_Solution.md)** before making changes. It records the work completed so far, current URLs and files, confirmed Kids Safe policy details, expansion conventions, and a ready-to-use onboarding prompt.
+Read **[Website Handover — Smart Mobile Solution (SMS)](docs/Website_Handover_Smart_Mobile_Solution.md)** before making substantial changes or handing the work to another agent. It records the app-specific details, confirmed Kids Safe privacy facts, current website state, asset rules, deployment checkpoint and a ready-to-use onboarding prompt.
 
-Suggested handover procedure:
-
-1. Attach the handover Markdown file to a new agent conversation.
-2. Connect the agent to `SmartMobileSolution/sms-tools` and grant repository access if it needs to edit files.
-3. Paste the onboarding prompt from Section 8 of the handover document.
-4. Ask the agent to inspect the current `main` branch and confirm the actual repository state before making changes.
-5. Give the agent the next concrete website task. Do not include access tokens, passwords, or other secrets in prompts.
-
-## Scope
-
-This repository and these notes cover the **SMS website only**. They do not transfer or document the Android application source code for Kids Safe.
+This repository and these notes cover the **SMS website only**. They do not transfer or document the Android application source code for Kids Safe or App Locker.

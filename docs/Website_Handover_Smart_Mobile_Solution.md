@@ -1,6 +1,6 @@
 # TÀI LIỆU BÀN GIAO WEBSITE — SMART MOBILE SOLUTION (SMS)
 
-**Ngày lập:** 02/11/2026  
+**Cập nhật lần cuối:** 18/11/2026  
 **Repository:** `SmartMobileSolution/sms-tools`  
 **Branch:** `main`  
 **Website:** https://smartmobilesolution.github.io/sms-tools/
@@ -22,6 +22,10 @@ Website là trang giới thiệu Smart Mobile Solution (SMS), danh sách ứng d
 - Tinh chỉnh giao diện dùng chung trong stylesheet: màu sắc xanh/teal, typography, card, navigation, trang policy và responsive cho màn hình nhỏ.
 - Thay tham chiếu logo công ty từ `company-logo.svg` sang `company-logo.png` trên các trang HTML. Người dùng đã tự commit ảnh PNG gốc và xóa SVG cũ; phần code đã được cập nhật để trỏ đến PNG.
 - Thay icon minh họa chữ K trên thẻ ứng dụng bằng ảnh tại `assets/images/kids-safe-icon.svg`.
+- Cập nhật Home card của Kids Safe để đồng bộ cấu trúc với App Locker: phân loại ANDROID · PARENTAL CONTROLS, tag, liên kết Google Play và Privacy Policy; thay nhãn trạng thái `V1` bằng `ANDROID`.
+- Hoàn thiện App Locker detail page: thêm gallery 5 ảnh PNG, responsive layout và lazy loading; bỏ link Privacy Policy dư ngay dưới nhóm CTA Hero.
+- Chỉnh App Locker hero icon: hiển thị trực tiếp icon, không có khung/card/nền/glow trang trí bên ngoài.
+- Xác minh GitHub Pages workflow #48 đã hoàn tất thành công cho commit `041a961de459a9656411134bcd18fe6aa7555a14` ngày 18/11/2026.
 
 ## 3. Repository và cấu trúc file hiện tại
 
@@ -40,6 +44,7 @@ Website là trang giới thiệu Smart Mobile Solution (SMS), danh sách ứng d
 | `assets/images/company-logo.png` | Logo công ty dạng PNG do người dùng upload/commit; HTML hiện trỏ đến file này |
 | `assets/images/kids-safe-icon.svg` | Icon Kids Safe đang được Home, Apps và Privacy Directory tham chiếu |
 | `assets/images/app-locker-icon.webp` | Icon App Locker dùng trên Home, Apps, Detail và Privacy Policy |
+| `assets/images/app-locker/screenshots/screen-01.png` … `screen-05.png` | Năm ảnh PNG gốc được dùng trong gallery trên App Locker detail page |
 
 ### Các URL hiện có
 
@@ -147,7 +152,7 @@ Sao chép prompt sau và gửi kèm file bàn giao này trong cuộc trò chuy�
 >
 > Khi chỉnh sửa Privacy Policy, chỉ sử dụng các thông tin đã được người dùng xác nhận và giữ nội dung EN/VI tương đương. Không suy diễn về dữ liệu, SDK, consent hoặc tuân thủ pháp lý. Ngày policy hiện được yêu cầu giữ là 20 February 2022.
 >
-> Với mỗi yêu cầu: (1) kiểm tra source và asset liên quan; (2) đề xuất kế hoạch ngắn nếu thay đổi nhiều file; (3) chỉnh sửa tối thiểu; (4) kiểm tra relative links, ảnh, favicon, responsive và các trang ngôn ngữ; (5) kiểm tra diff; (6) commit/push chỉ khi được cấp quyền và người dùng yêu cầu; (7) báo cáo rõ file, URL và các điểm còn chưa xác minh. Không tuyên bố đã kiểm tra live site nếu chưa thực sự kiểm tra.
+> Với mỗi yêu cầu: (1) kiểm tra source và asset liên quan; (2) đề xuất kế hoạch ngắn nếu thay đổi nhiều file; (3) chỉnh sửa tối thiểu; (4) kiểm tra relative links, ảnh, favicon, responsive và các trang ngôn ngữ; (5) kiểm tra diff; (6) người dùng đã cấp quyền làm việc trực tiếp trên repository, được chỉnh sửa và commit/push lên `main` khi giao nhiệm vụ; (7) tuyệt đối không tự ý merge hoặc thay đổi cấu hình repository; (8) báo cáo rõ file, URL và các điểm còn chưa xác minh. Không tuyên bố đã kiểm tra live site nếu chưa thực sự kiểm tra.
 
 ## 9. Cách bàn giao cho agent mới
 
@@ -164,19 +169,77 @@ Sao chép prompt sau và gửi kèm file bàn giao này trong cuộc trò chuy�
 - Its detail page is `/apps/app-locker/`.
 - Its English Privacy Policy is `/privacy/app-locker/`; no Vietnamese version has been supplied or created.
 - Premium benefits shown on the detail page are: ad removal, unlimited app locking, and unlimited photo/video protection. Do not add unconfirmed technical claims such as biometric unlocking or uninstall protection.
-- App icon: `assets/images/app-locker-icon.webp`. The user's supplied 512×512 PNG remains the original source asset; the website uses the WebP derivative.
+- App icon: `assets/images/app-locker-icon.webp`. This is the active website asset, referenced by Home, Apps, the detail page and the Privacy Policy. The current tracked repository tree contains the WebP asset; do not assume the original supplied PNG is also stored in the repository.
+- The hero icon is displayed directly, without an outer card/frame, decorative background, circular rings or glow. Its size is controlled by `assets/css/styles.css`.
 - Google Play URL supplied by the user: `https://play.google.com/store/apps/details?id=org.app.secure.locker` (package `org.app.secure.locker`).
-- Five promotional screenshots have been uploaded as PNG files at `assets/images/app-locker/screenshots/screen-01.png` through `screen-05.png` and are displayed in the responsive gallery on `/apps/app-locker/`. Each PNG is approximately 1.9–2.3 MB; images use lazy loading. Consider generating WebP derivatives in a future performance pass without replacing the user-provided PNG originals.
+- Five owner-provided promotional screenshots are stored as original PNG files at `assets/images/app-locker/screenshots/screen-01.png` through `screen-05.png`. The gallery is part of the detail page, placed after the hero and before the features section. It uses lazy loading and responsive columns: five on wide desktop, three on medium/tablet widths, and two on mobile (the fifth card is centered).
+- The five PNGs total approximately 10.57 MB. A future performance pass may add WebP derivatives and update the gallery to use responsive/modern formats, but preserve the supplied PNG originals unless the owner approves replacement.
+- The detail page's Hero contains the Google Play CTA and Explore features CTA. The redundant Privacy Policy link directly below the Hero CTA group was removed; the policy link remains in the page's lower CTA/footer navigation.
 
-## 11. Shared navigation
+## 11. Kids Safe: Parent Control — current website status
+
+- Kids Safe is listed on Home and in the Apps directory.
+- There is currently no dedicated Kids Safe detail page at `/apps/kids-safe/`. Do not create one unless requested.
+- Google Play URL supplied by the user: `https://play.google.com/store/apps/details?id=org.app.kidsmode` (package `org.app.kidsmode`).
+- Privacy Policy pages exist at `/privacy/kids-safe/` (English) and `/privacy/kids-safe/vi/` (Vietnamese).
+- The Home card was updated on 18/11/2026 to use the shared `.app-card` visual structure consistent with App Locker, with category text `ANDROID · PARENTAL CONTROLS`, the existing Kids Mode/Allowed apps/Parent PIN tags, a direct Google Play CTA, a Privacy Policy link and an `ANDROID` status label.
+- The Apps directory card is not identical to the Home card: it uses `ANDROID · TOOLS`, keeps the `V1` status label, and currently links to the Kids Safe Privacy Policy without a Google Play CTA. Do not assume the Apps directory was updated by the Home-card task.
+- Kids Safe V1 scope and privacy details are recorded in Section 5. Do not overstate remote control or cloud family-management functionality.
+
+## 12. Shared navigation
 
 - The global Privacy navigation points to `/privacy/`.
 - The Privacy Directory links each app to its own policy.
 - Kids Safe retains English and Vietnamese policy pages; App Locker currently has English only.
 
-## 12. Thông tin liên hệ website
+## 13. Thông tin liên hệ website
 
 - Brand: Smart Mobile Solution (SMS)
 - Support: `help.mobilesolution@gmail.com`
 - Website: https://smartmobilesolution.github.io/sms-tools/
 - Repository: https://github.com/SmartMobileSolution/sms-tools
+
+
+## 14. Current verified handoff checkpoint — 18 November 2026
+
+This section is the latest operational snapshot and supersedes earlier notes where details may have become stale.
+
+### Repository and deployment
+
+- Repository: `SmartMobileSolution/sms-tools`.
+- Branch: `main`.
+- Verified HEAD at this handoff update: `041a961de459a9656411134bcd18fe6aa7555a14` — `Align Kids Safe home card with App Locker`.
+- GitHub Pages workflow run #48 completed with conclusion `success` for the same commit: https://github.com/SmartMobileSolution/sms-tools/actions/runs/44338980484.
+- Live website: https://smartmobilesolution.github.io/sms-tools/.
+- Home: https://smartmobilesolution.github.io/sms-tools/.
+- Apps directory: https://smartmobilesolution.github.io/sms-tools/apps/.
+- App Locker detail: https://smartmobilesolution.github.io/sms-tools/apps/app-locker/.
+- App Locker Privacy Policy: https://smartmobilesolution.github.io/sms-tools/privacy/app-locker/.
+- Kids Safe Privacy Policy EN: https://smartmobilesolution.github.io/sms-tools/privacy/kids-safe/.
+- Kids Safe Privacy Policy VI: https://smartmobilesolution.github.io/sms-tools/privacy/kids-safe/vi/.
+
+### Relevant recent commits
+
+| Commit | Change |
+|---|---|
+| `f9ec3a8` | Improve App Locker hero icon asset and remove duplicate Hero Privacy link |
+| `83d2b93` | Add App Locker screenshot gallery |
+| `e0c75ab` | Remove decorative frame around App Locker icon |
+| `041a961` | Align Kids Safe Home card with App Locker card and add its Play Store link |
+
+### Owner authorization and boundaries
+
+- The owner explicitly authorized direct work on this repository, including editing and committing/pushing to `main` when a task is assigned.
+- Do not merge branches or pull requests.
+- Do not modify GitHub Pages configuration, workflows, branch protection, repository settings or other repository configuration unless the owner separately and explicitly authorizes that specific change.
+- Always inspect the live HEAD before editing and use a non-forced, expected-head ref update to avoid overwriting concurrent work.
+
+### Next-agent starting checklist
+
+1. Read this handoff and `README.md`.
+2. Fetch the current `main` HEAD and inspect the relevant files; the recorded commit is a checkpoint, not a substitute for fresh inspection.
+3. Check the current GitHub Pages workflow if a task depends on the public website state.
+4. Preserve the existing static HTML/CSS/JS architecture unless a task explicitly calls for a structural change.
+5. Do not claim that Kids Safe has a detail page: it currently has Home/App directory cards, Play Store URL and EN/VI Privacy Policy pages only.
+6. Do not claim that App Locker has a Vietnamese Privacy Policy: only the English page currently exists.
+7. Preserve the supplied PNG screenshot originals; any future WebP conversion should be additive or explicitly approved.
