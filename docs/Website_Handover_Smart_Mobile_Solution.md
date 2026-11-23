@@ -416,3 +416,17 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 - Updated the Plans section heading to “Free access works differently on each platform” to signal the platform distinction before users read the allowance details.
 - No rule was added about whether failed recognition attempts consume an iOS run or how multi-table images are counted; those details were not specified in the updated owner decision.
 - Files changed: `apps/pictarow/index.html`, `README.md`, and this handoff document.
+
+
+## 27. Pictarow screenshot gallery display correction — 24 November 2026
+
+- Review found that a prior shared CSS badge update had removed the Pictarow-specific screenshot rule. As a result, the five Pictarow images inherited the generic App Locker gallery styling, which assumes a 928:1645 aspect ratio and uses `object-fit: cover`. The gallery also displayed five columns on desktop, making each promotional image too small to inspect comfortably.
+- Restored a dedicated Pictarow gallery layout:
+  - Desktop: 3 columns.
+  - Tablet: 2 columns.
+  - Mobile: 1 column.
+  - Image aspect ratio: 1320:2868, matching the actual source files.
+  - `object-fit: contain` so the complete promotional screenshot is preserved without cropping.
+- Source images were inspected and remain the owner-committed WebP files at 1320 × 2868; no low-resolution thumbnails were substituted and no source image was modified.
+- The correction changes only display CSS; HTML image sources and asset files remain unchanged.
+- Files changed: `assets/css/styles.css`, `README.md`, and this handoff document.

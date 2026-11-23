@@ -172,3 +172,10 @@ This repository and these notes cover the **SMS website only**. They do not tran
 - **iOS Free:** includes 3 recognition runs total for the lifetime of the app; the allowance does not reset monthly.
 - Library, editing, XLSX export and CSV export remain available after the iOS free recognition allowance is used.
 - **Premium:** unlimited recognition, ad-free experience, and optional iCloud Sync on iOS, as described on the Pictarow detail page.
+
+
+## Pictarow screenshot gallery rendering
+
+- The five Pictarow promo screenshots remain the original 1320 × 2868 WebP files.
+- The gallery has a dedicated three-column desktop, two-column tablet and one-column mobile layout so the tall promo artwork is shown at a useful size.
+- The Pictarow-specific image rule uses the source aspect ratio (1320:2868) and `object-fit: contain`; it must not inherit App Locker's 928:1645 / `object-fit: cover` image rule.
