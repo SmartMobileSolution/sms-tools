@@ -271,13 +271,19 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 ## 17. Pictarow: Photo to Table — Privacy Policy and Terms of Use
 
 - Owner-provided source content files: `privacy-policy.md` and `terms-of-use.md`.
-- Published Privacy Policy: `/privacy/pictarow/` (English).
+- Published Privacy Policy: `/privacy/pictarow/` (English), intended as the shared policy for iOS and Android.
 - Published Terms of Use: `/terms/pictarow/` (English).
 - Both pages use the existing static HTML/CSS/JS site shell and shared stylesheet, with responsive contents navigation and cross-links between the two legal pages.
 - Pictarow was added to the Privacy Directory at `/privacy/`; the directory entry links to both legal pages.
 - Effective date specified by the owner for both documents: **20 February 2022**.
 - Governing law in the Terms of Use: **Vietnam**.
-- Subscription wording reflects the owner's commercial decision: free access is ad-supported and may require viewing ads to use features; Premium is a paid monthly or yearly auto-renewing subscription providing unlimited recognition, optional iCloud Sync and an ad-free experience. **No Premium free trial is offered.**
-- The supplied source states that recognition is performed on-device with Apple's Vision framework; image/table contents remain on-device (or in the user's private iCloud if optional sync is enabled); Firebase Analytics, Crashlytics and Remote Config are used; Google AdMob/UMP are used for advertising and consent; Apple handles subscriptions. The published policy preserves these descriptions and third-party references.
-- Source implementation commits: `4f1e0c5` (Privacy Policy), `13632cf` (Terms of Use), `a3c23e7` (Privacy Directory), `540aac1` (README).
-- Legal content was formatted and the explicit placeholders were resolved from owner instructions; publication is not a legal opinion or independent audit of app implementation. Before release, confirm that actual production SDK configuration, data flows, subscription behavior and app UI match these statements, and consider qualified legal review of the documents.
+- Subscription wording reflects the owner's commercial decision: free access is ad-supported and may require viewing ads to use features; Premium is a paid monthly or yearly auto-renewing subscription providing unlimited recognition, optional iCloud Sync on iOS and an ad-free experience. **No Premium free trial is offered.**
+- Owner-confirmed platform behavior for the shared Privacy Policy:
+  - Image/table recognition is performed entirely on-device on both iOS and Android. User photos and table contents are not uploaded to SMS servers or sent to a third-party OCR service.
+  - iOS: optional Premium iCloud Sync uses Apple's CloudKit.
+  - Android v1: no cloud backup or synchronization is available. Do not state that Android currently uses Google Drive. The owner plans to use Google Drive API for a future Android cloud feature; update the policy when that feature is implemented and ready for release.
+  - Both platforms use Firebase Analytics, Firebase Crashlytics, Firebase Remote Config, Google AdMob and Google UMP.
+  - iOS subscriptions are handled by Apple App Store / StoreKit; Android subscriptions are handled by Google Play / Google Play Billing.
+- The Privacy Policy page was updated to distinguish platform behavior for local data, cloud sync/backup, advertising, purchases, third-party services, retention/deletion and device security. It retains the common policy URL and the owner's effective date.
+- Source implementation commits: `4f1e0c5` (original Privacy Policy), `13632cf` (Terms of Use), `a3c23e7` (Privacy Directory), `540aac1` (README), and `e99f86b` (platform-specific Privacy Policy update).
+- Legal content is based on owner-confirmed product behavior; publication is not a legal opinion or independent audit of app implementation. Before release, confirm production SDK configuration, data flows, subscription behavior, platform privacy disclosures and app UI match these statements, and consider qualified legal review of the documents.
