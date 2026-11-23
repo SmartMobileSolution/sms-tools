@@ -20,6 +20,8 @@ Official static website for **Smart Mobile Solution (SMS)**, hosted with GitHub 
 | Kids Safe Privacy Policy (English) | `/privacy/kids-safe/` |
 | Kids Safe Privacy Policy (Vietnamese) | `/privacy/kids-safe/vi/` |
 | App Locker Privacy Policy (English) | `/privacy/app-locker/` |
+| Pictarow Privacy Policy (English) | `/privacy/pictarow/` |
+| Pictarow Terms of Use (English) | `/terms/pictarow/` |
 
 ## Published apps
 
@@ -27,6 +29,7 @@ Official static website for **Smart Mobile Solution (SMS)**, hosted with GitHub 
 |---|---|---|---|
 | Kids Safe: Parent Control | [Google Play](https://play.google.com/store/apps/details?id=org.app.kidsmode) · package `org.app.kidsmode` | No dedicated detail page currently; listed on Home and Apps | English and Vietnamese |
 | App Locker: Lock Apps | [Google Play](https://play.google.com/store/apps/details?id=org.app.secure.locker) · package `org.app.secure.locker` | [App Locker detail](/apps/app-locker/) | English only |
+| Pictarow: Photo to Table | iOS App Store listing not added here | No dedicated detail page yet | [Privacy Policy](/privacy/pictarow/) · [Terms of Use](/terms/pictarow/) |
 
 Google Play URLs were supplied by the site owner. Do not infer or invent additional store links.
 
