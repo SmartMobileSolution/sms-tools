@@ -258,4 +258,4 @@ This section is the latest operational snapshot and supersedes earlier notes whe
   - Privacy Policy CTA: `../privacy/kids-safe/` from the Apps Directory.
   - Status: `ANDROID`.
 - Source commit: `78449ab9f599ab6d3bdcc21bb56e7666510eb0a5` — `Align Kids Safe card in Apps directory with Home`.
-- D-01 — Kids Safe card content alignment: **source changes completed**. Public deployment verification should be checked against the GitHub Pages workflow before marking the live website as deployed.
+- D-01 — Kids Safe card content alignment: **COMPLETED**. The owner confirmed the live Apps Directory display is correct on 23/11/2026. GitHub Pages workflow #51 for HEAD `57c34da8f59c97ad1057e9254df32a00dc244964` completed successfully: https://github.com/SmartMobileSolution/sms-tools/actions/runs/45190748166.
