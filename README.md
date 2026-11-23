@@ -14,6 +14,7 @@ Official static website for **Smart Mobile Solution (SMS)**, hosted with GitHub 
 |---|---|
 | Home | `/` |
 | App directory | `/apps/` |
+| Kids Safe detail | `/apps/kids-safe/` |
 | App Locker detail | `/apps/app-locker/` |
 | Privacy directory | `/privacy/` |
 | Contact | `/contact/` |
@@ -27,7 +28,7 @@ Official static website for **Smart Mobile Solution (SMS)**, hosted with GitHub 
 
 | App | Google Play | Website detail | Privacy Policy |
 |---|---|---|---|
-| Kids Safe: Parent Control | [Google Play](https://play.google.com/store/apps/details?id=org.app.kidsmode) · package `org.app.kidsmode` | No dedicated detail page currently; listed on Home and Apps | English and Vietnamese |
+| Kids Safe: Parent Control | [Google Play](https://play.google.com/store/apps/details?id=org.app.kidsmode) · package `org.app.kidsmode` | [Kids Safe detail](/apps/kids-safe/) | English and Vietnamese |
 | App Locker: Lock Apps | [Google Play](https://play.google.com/store/apps/details?id=org.app.secure.locker) · package `org.app.secure.locker` | [App Locker detail](/apps/app-locker/) | English only |
 | Pictarow: Photo to Table | iOS App Store listing not added here | No dedicated detail page yet | [Privacy Policy](/privacy/pictarow/) · [Terms of Use](/terms/pictarow/) |
 
@@ -73,8 +74,8 @@ This is a lightweight static website built with HTML, CSS and JavaScript. There 
 
 ## Current implementation notes
 
-- The Home page lists Kids Safe and App Locker using the shared `.app-card` styling. The Kids Safe Home card includes its Google Play link and Privacy Policy link. The App Locker Home card links to its detail page and Privacy Policy.
-- The Apps directory lists both apps. Kids Safe currently has no dedicated detail page; App Locker does.
+- The Home page lists Kids Safe and App Locker using the shared `.app-card` styling. The Kids Safe Home card links to its detail page, Google Play and Privacy Policy. The App Locker Home card links to its detail page and Privacy Policy.
+- The Apps directory lists both apps. Both Kids Safe and App Locker have dedicated detail pages.
 - App Locker's detail page contains a five-image promotional screenshot gallery. The gallery now uses optimized WebP files `screen-01.webp` through `screen-05.webp` under `assets/images/app-locker/screenshots/`, with lazy loading and responsive columns.
 - App Locker's hero icon is displayed directly without an outer decorative card, frame, background panel, or glow layer.
 - The App Locker Google Play CTA and the Kids Safe Home Google Play link open their respective supplied Play Store URLs in a new tab.
@@ -94,7 +95,7 @@ This is a lightweight static website built with HTML, CSS and JavaScript. There 
 ## Brand and image assets
 
 - Company logo: `assets/images/company-logo.png`. This is the site owner's original PNG. Use it as-is; do not redraw, crop, recolor, recompress, or convert it. Adjust display size with CSS only.
-- Kids Safe icon: `assets/images/kids-safe-icon.svg`. Verify the actual file before replacing it; the handover notes that it may be an SVG wrapper around raster artwork, not the original editable vector.
+- Kids Safe icon: `assets/images/kids-safe-icon.svg`. It is used unchanged on the Kids Safe detail page.
 - App Locker icon: `assets/images/app-locker-icon.webp`, used on Home, Apps, the App Locker detail page, and its Privacy Policy.
 - App Locker screenshots: five optimized WebP files at `assets/images/app-locker/screenshots/screen-01.webp` through `screen-05.webp`; the App Locker detail gallery references these WebP paths. Kids Safe screenshots: six WebP files at `assets/images/kids-safe/screenshots/screen-01.webp` through `screen-06.webp`. The Kids Safe icon remains `assets/images/kids-safe-icon.svg`.
 - Search all HTML, CSS, favicon and JavaScript references before renaming or replacing any asset.
