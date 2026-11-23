@@ -324,3 +324,19 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 - No subscription price is advertised on the detail page because storefront-specific prices and final App Store Connect configuration remain open.
 - Pictarow remains an iOS/iPadOS product in this website entry; no Android store link or availability claim is added.
 - Legal/brand caution: Pictarow trademark clearance remains open. The page does not claim legal clearance or App Store availability.
+
+
+## 21. Pictarow cross-platform labels, store CTAs and subscription pricing — 23 November 2026
+
+- Pictarow platform labels on Home, Apps Directory and the detail hero now read `IOS · ANDROID` (with `PRODUCTIVITY` retained in the category kicker).
+- Added Google Play and App Store CTA placeholders to the Home card, Apps Directory card and Pictarow detail hero. They are intentionally non-clickable and display `Coming soon` until the owner supplies the public listing URLs. Do not add guessed or dummy href values.
+- The detail page's Premium card now distinguishes subscription price sources:
+  - `Android · Google Play`: users should check the current price in Google Play.
+  - `iOS · App Store`: users should check the current price in the App Store.
+  - It does not show a single global price. Storefront pricing may differ by platform and country/region.
+- Rationale checked against official platform documentation on 23 November 2026:
+  - Apple allows auto-renewable subscription prices to be configured by App Store country/region (storefront), with numerous price points and localized currencies: https://developer.apple.com/help/app-store-connect/manage-subscriptions/manage-pricing-for-auto-renewable-subscriptions
+  - Google Play supports per-country/region subscription base-plan prices and availability: https://support.google.com/googleplay/android-developer/answer/140504
+- Exact public Android/iOS pricing remains OPEN until both store configurations and intended launch markets are confirmed. Do not publish the previously agreed iOS USD reference price as a universal website price; likewise do not infer Android prices.
+- Screenshot gallery remains OPEN. The owner will commit actual Pictarow screenshots and notify the website workflow; do not use the App Store storyboard wireframes as product screenshots.
+- This update preserves the static HTML/CSS/JS architecture; no frameworks or repository configuration were changed.

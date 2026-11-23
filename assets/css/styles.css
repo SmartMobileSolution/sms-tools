@@ -103,3 +103,19 @@
 .pictarow-listing-icon{object-fit:cover}
 @media(max-width:900px){.pictarow-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.pictarow-privacy-panel{align-items:flex-start;flex-direction:column}}
 @media(max-width:760px){.pictarow-hero{background:none}.pictarow-steps,.pictarow-plan-grid{grid-template-columns:1fr}.pictarow-step{padding:19px 16px}.pictarow-plan-card{padding:24px}.pictarow-privacy-panel{padding:23px}.pictarow-privacy-panel .actions{justify-content:flex-start}}
+
+
+/* Pictarow store CTAs and platform-specific subscription pricing */
+.pictarow-store-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.pictarow-store-button{display:inline-flex;min-width:150px;min-height:52px;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;padding:9px 16px;border:1px solid #cbd4e1;border-radius:12px;background:#fff;color:#182230;box-shadow:0 4px 12px rgba(24,34,48,.04);line-height:1.2;cursor:default}
+.pictarow-store-button strong{font:800 13px Manrope,sans-serif}
+.pictarow-store-button small{font:500 11px Manrope,sans-serif;color:#647184}
+.pictarow-store-button.compact{min-width:112px;min-height:42px;padding:7px 11px;border-radius:10px}
+.pictarow-store-button.compact strong{font-size:11px}
+.pictarow-store-button.compact small{font-size:10px}
+.pictarow-card-store-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+.pictarow-store-pricing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:18px}
+.pictarow-store-pricing>div{display:flex;flex-direction:column;gap:5px;padding:13px 14px;border:1px solid #d7e1f6;border-radius:12px;background:rgba(255,255,255,.78)}
+.pictarow-store-pricing strong{font:800 12px Manrope,sans-serif;color:#182230}
+.pictarow-store-pricing span{font-size:11px;line-height:1.45;color:#647184}
+@media(max-width:760px){.pictarow-store-pricing{grid-template-columns:1fr}.pictarow-store-button{flex:1;min-width:130px}}

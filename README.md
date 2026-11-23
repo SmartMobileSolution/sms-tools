@@ -14,7 +14,8 @@ Official static website for **Smart Mobile Solution (SMS)**, hosted with GitHub 
 |---|---|
 | Home | `/` |
 | App directory | `/apps/` |
-| Pictarow detail | `/apps/pictarow/` |\n| Kids Safe detail | `/apps/kids-safe/` |
+| Pictarow detail | `/apps/pictarow/` |
+| Kids Safe detail | `/apps/kids-safe/` |
 | App Locker detail | `/apps/app-locker/` |
 | Privacy directory | `/privacy/` |
 | Contact | `/contact/` |
@@ -76,8 +77,10 @@ This is a lightweight static website built with HTML, CSS and JavaScript. There 
 
 ## Current implementation notes
 
-- The Home page lists Kids Safe and App Locker using the shared `.app-card` styling. The Kids Safe Home card links to its detail page, Google Play and Privacy Policy. The App Locker Home card links to its detail page and Privacy Policy.
-- The Apps directory lists Pictarow, Kids Safe and App Locker. All three have dedicated detail pages.\n- Pictarow detail is at `/apps/pictarow/`. It uses the approved 1024px Scan to Grid master exported as `assets/images/pictarow-icon.webp`, describes the confirmed product workflow and Free/Premium limits, and links to the existing Privacy Policy and Terms of Use. No App Store CTA is shown because a public listing URL has not been supplied.\n- Pictarow production screenshots are not yet in the website repository. Do not use storyboard wireframes as app screenshots; add a gallery only after real Release/near-Release captures are supplied and reviewed.
+- The Home page lists Pictarow, Kids Safe and App Locker using the shared `.app-card` styling. Pictarow shows Android and iOS store CTA placeholders pending public listing URLs.
+- The Apps directory lists Pictarow, Kids Safe and App Locker. All three have dedicated detail pages.
+- Pictarow detail is at `/apps/pictarow/`. It uses the approved 1024px Scan to Grid master exported as `assets/images/pictarow-icon.webp`, describes the confirmed product workflow and Free/Premium limits, and links to the existing Privacy Policy and Terms of Use. Google Play and App Store CTA placeholders are visible as “Coming soon” until public listing URLs are supplied.
+- Pictarow production screenshots are not yet in the website repository. The owner will add and commit the Release-build screenshots; only add a gallery after those images are supplied and visually reviewed.
 - App Locker's detail page contains a five-image promotional screenshot gallery. The gallery now uses optimized WebP files `screen-01.webp` through `screen-05.webp` under `assets/images/app-locker/screenshots/`, with lazy loading and responsive columns.
 - App Locker's hero icon is displayed directly without an outer decorative card, frame, background panel, or glow layer.
 - The App Locker Google Play CTA and the Kids Safe Home Google Play link open their respective supplied Play Store URLs in a new tab.
@@ -98,7 +101,8 @@ This is a lightweight static website built with HTML, CSS and JavaScript. There 
 
 - Company logo: `assets/images/company-logo.png`. This is the site owner's original PNG. Use it as-is; do not redraw, crop, recolor, recompress, or convert it. Adjust display size with CSS only.
 - Kids Safe icon: `assets/images/kids-safe-icon.svg`. It is used unchanged on the Kids Safe detail page.
-- Pictarow icon: `assets/images/pictarow-icon.webp`, a WebP web derivative of the owner-approved 1024×1024 master; the Library master PNG remains the source.\n- App Locker icon: `assets/images/app-locker-icon.webp`, used on Home, Apps, the App Locker detail page, and its Privacy Policy.
+- Pictarow icon: `assets/images/pictarow-icon.webp`, a WebP web derivative of the owner-approved 1024×1024 master; the Library master PNG remains the source.
+- App Locker icon: `assets/images/app-locker-icon.webp`, used on Home, Apps, the App Locker detail page, and its Privacy Policy.
 - App Locker screenshots: five optimized WebP files at `assets/images/app-locker/screenshots/screen-01.webp` through `screen-05.webp`; the App Locker detail gallery references these WebP paths. Kids Safe screenshots: six WebP files at `assets/images/kids-safe/screenshots/screen-01.webp` through `screen-06.webp`. The Kids Safe icon remains `assets/images/kids-safe-icon.svg`.
 - Search all HTML, CSS, favicon and JavaScript references before renaming or replacing any asset.
 
