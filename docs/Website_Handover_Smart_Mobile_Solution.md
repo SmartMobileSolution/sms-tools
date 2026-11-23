@@ -168,12 +168,13 @@ Sao chép prompt sau và gửi kèm file bàn giao này trong cuộc trò chuy�
 - App Locker is listed on Home and Apps.
 - Its detail page is `/apps/app-locker/`.
 - Its English Privacy Policy is `/privacy/app-locker/`; no Vietnamese version has been supplied or created.
+- Owner decision (23/11/2026): an App Locker Vietnamese Privacy Policy is **not required**. Keep the English policy as the only App Locker policy language unless the owner changes this decision.
 - Premium benefits shown on the detail page are: ad removal, unlimited app locking, and unlimited photo/video protection. Do not add unconfirmed technical claims such as biometric unlocking or uninstall protection.
 - App icon: `assets/images/app-locker-icon.webp`. This is the active website asset, referenced by Home, Apps, the detail page and the Privacy Policy. The current tracked repository tree contains the WebP asset; do not assume the original supplied PNG is also stored in the repository.
 - The hero icon is displayed directly, without an outer card/frame, decorative background, circular rings or glow. Its size is controlled by `assets/css/styles.css`.
 - Google Play URL supplied by the user: `https://play.google.com/store/apps/details?id=org.app.secure.locker` (package `org.app.secure.locker`).
 - Five owner-provided promotional screenshots are stored as original PNG files at `assets/images/app-locker/screenshots/screen-01.png` through `screen-05.png`. The gallery is part of the detail page, placed after the hero and before the features section. It uses lazy loading and responsive columns: five on wide desktop, three on medium/tablet widths, and two on mobile (the fifth card is centered).
-- The five PNGs total approximately 10.57 MB. A future performance pass may add WebP derivatives and update the gallery to use responsive/modern formats, but preserve the supplied PNG originals unless the owner approves replacement.
+- The five original PNGs total 10,571,304 bytes (about 10.57 MB decimal). Keep these originals unchanged. Add optimized WebP derivatives and update the gallery to use them once conversion is completed and visually validated.
 - The detail page's Hero contains the Google Play CTA and Explore features CTA. The redundant Privacy Policy link directly below the Hero CTA group was removed; the policy link remains in the page's lower CTA/footer navigation.
 
 ## 11. Kids Safe: Parent Control — current website status
@@ -259,3 +260,9 @@ This section is the latest operational snapshot and supersedes earlier notes whe
   - Status: `ANDROID`.
 - Source commit: `78449ab9f599ab6d3bdcc21bb56e7666510eb0a5` — `Align Kids Safe card in Apps directory with Home`.
 - D-01 — Kids Safe card content alignment: **COMPLETED**. The owner confirmed the live Apps Directory display is correct on 23/11/2026. GitHub Pages workflow #51 for HEAD `57c34da8f59c97ad1057e9254df32a00dc244964` completed successfully: https://github.com/SmartMobileSolution/sms-tools/actions/runs/45190748166.
+
+
+## 16. Owner decisions and follow-up — 23 November 2026
+
+- D-03 — App Locker Privacy Policy language: **CLOSED / NOT REQUIRED**. The owner confirmed that a Vietnamese version is not needed. Keep the existing English-only policy; do not create a Vietnamese policy page or language switch for App Locker.
+- D-04 — App Locker screenshot gallery optimization: **IN PROGRESS / BLOCKED ON SOURCE IMAGE ACCESS IN THE EDITING RUNTIME**. The five original PNGs total 10,571,304 bytes. The intended safe implementation is additive WebP derivatives, quality-checked against each PNG, with the gallery switched to WebP only after the generated assets are available and verified. Preserve all five original PNGs. No image assets or gallery references have been changed yet.
