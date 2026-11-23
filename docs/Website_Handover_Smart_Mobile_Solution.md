@@ -403,3 +403,16 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 - Updated shared CSS for consistent badge dimensions and spacing. The Google Play WebP has transparent vertical padding; its display box crops those transparent margins without modifying the source asset.
 - This section supersedes earlier notes in Sections 23–24 about manually recreated icon tiles and Pictarow “Coming soon” labels.
 - Files changed: `index.html`, `apps/index.html`, `apps/pictarow/index.html`, `apps/kids-safe/index.html`, `apps/app-locker/index.html`, `assets/css/styles.css`, `README.md`, and this handoff document.
+
+
+## 26. Pictarow platform-specific Free recognition model — 24 November 2026
+
+- The owner updated the Pictarow Free access concept. This section supersedes the earlier three-successful-runs-per-calendar-month wording in Section 20 and the related generic Free allowance wording on the Pictarow detail page.
+- The Pictarow detail page now distinguishes the free recognition model by platform:
+  - **Android Free:** recognition has no fixed run quota; users must view ads to use the recognition feature.
+  - **iOS Free:** 3 recognition runs total for the lifetime of the app. This is a one-time lifetime allowance, not a monthly allowance.
+  - The Library, editing, XLSX export and CSV export remain available after the iOS free recognition allowance is used.
+- Premium wording remains: unlimited recognition, ad-free experience, optional iCloud Sync on iOS, and monthly or annual auto-renewing subscriptions with no free trial.
+- Updated the Plans section heading to “Free access works differently on each platform” to signal the platform distinction before users read the allowance details.
+- No rule was added about whether failed recognition attempts consume an iOS run or how multi-table images are counted; those details were not specified in the updated owner decision.
+- Files changed: `apps/pictarow/index.html`, `README.md`, and this handoff document.

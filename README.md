@@ -85,7 +85,7 @@ This is a lightweight static website built with HTML, CSS and JavaScript. There 
 
 - The Home page lists Pictarow, Kids Safe and App Locker using the shared `.app-card` styling. All app cards use the owner-committed official store badge artwork: Pictarow displays Google Play and App Store badges without links until public URLs are supplied; Kids Safe and App Locker display clickable Google Play badges only.
 - The Apps directory lists Pictarow, Kids Safe and App Locker. All three have dedicated detail pages.
-- Pictarow detail is at `/apps/pictarow/`. It uses the approved 1024px Scan to Grid master exported as `assets/images/pictarow-icon.webp`, describes the confirmed product workflow and Free/Premium limits, and links to the existing Privacy Policy and Terms of Use. The official Google Play and App Store badge artwork is displayed without links until public listing URLs are supplied; no “Coming soon” text is shown.
+- Pictarow detail is at `/apps/pictarow/`. It uses the approved 1024px Scan to Grid master exported as `assets/images/pictarow-icon.webp`, describes the confirmed product workflow and current platform-specific Free/Premium model, and links to the existing Privacy Policy and Terms of Use. The official Google Play and App Store badge artwork is displayed without links until public listing URLs are supplied; no “Coming soon” text is shown.
 - Pictarow detail includes a five-image promotional gallery using owner-committed WebP files `assets/images/pictarow/screenshots/screen-01.webp` through `screen-05.webp`. The images are 1320 × 2868 each, use lazy loading, and preserve their complete portrait artwork without cropping.
 - App Locker's detail page contains a five-image promotional screenshot gallery. The gallery now uses optimized WebP files `screen-01.webp` through `screen-05.webp` under `assets/images/app-locker/screenshots/`, with lazy loading and responsive columns.
 - App Locker's hero icon is displayed directly without an outer decorative card, frame, background panel, or glow layer.
@@ -164,3 +164,11 @@ This repository and these notes cover the **SMS website only**. They do not tran
 - App Store: `assets/images/appstore-badge.svg` (owner-committed SVG).
 - The original badge files are used directly and are not redrawn or modified.
 - Pictarow displays both badges without links while its public store URLs are not yet available. Kids Safe and App Locker display the Google Play badge only, linked to their verified Android listings.
+
+
+## Pictarow Free and Premium access model
+
+- **Android Free:** table recognition has no fixed run quota, but users must view ads to use recognition.
+- **iOS Free:** includes 3 recognition runs total for the lifetime of the app; the allowance does not reset monthly.
+- Library, editing, XLSX export and CSV export remain available after the iOS free recognition allowance is used.
+- **Premium:** unlimited recognition, ad-free experience, and optional iCloud Sync on iOS, as described on the Pictarow detail page.
