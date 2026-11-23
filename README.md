@@ -149,3 +149,10 @@ The site owner has authorized direct work on `SmartMobileSolution/sms-tools`: ed
 Read **[Website Handover — Smart Mobile Solution (SMS)](docs/Website_Handover_Smart_Mobile_Solution.md)** before making substantial changes or handing the work to another agent. It records the app-specific details, confirmed Kids Safe privacy facts, current website state, asset rules, deployment checkpoint and a ready-to-use onboarding prompt.
 
 This repository and these notes cover the **SMS website only**. They do not transfer or document the Android application source code for Kids Safe or App Locker.
+
+
+## Store tile presentation
+
+- Google Play and App Store tiles use a leading store icon followed by the store name on one line; no subtitle or arrow is shown.
+- Pictarow store tiles remain non-clickable and retain a compact **Coming soon** status until official public listing URLs are supplied.
+- Kids Safe and App Locker show only the Google Play tile, with their verified Play Store URLs; both are Android-only.

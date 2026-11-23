@@ -375,3 +375,15 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 - Added focused hover and keyboard-focus styling for clickable card store tiles in `assets/css/styles.css`; existing responsive card layout and static HTML/CSS/JS architecture are preserved.
 - Files changed: `index.html`, `apps/index.html`, `assets/css/styles.css`, `README.md`, and this handoff document.
 - This section supersedes earlier wording that described the Kids Safe card's store action as an inline text CTA. Both Android app cards now use the dedicated store-tile treatment on both listing surfaces.
+
+
+## 24. Store tile visual refinement (23 November 2026)
+
+- Refined store tiles on Home, Apps Directory and Pictarow detail:
+  - Removed the second-line subtitle from the store buttons.
+  - Added a recognizable Google Play or App Store icon at the leading edge.
+  - Kept the store name as the text label, without an arrow.
+- Pictarow's tiles remain non-clickable and retain **Coming soon** as a compact inline status so the lack of public store URLs remains clear.
+- Kids Safe and App Locker keep their clickable Google Play tiles and exact owner-supplied destinations; no App Store tile was added for either Android-only app.
+- Updated shared store-button CSS for a single-row icon/label/status layout, including compact and responsive variants.
+- Files changed: `index.html`, `apps/index.html`, `apps/pictarow/index.html`, `assets/css/styles.css`, `README.md`, and this handoff document.
