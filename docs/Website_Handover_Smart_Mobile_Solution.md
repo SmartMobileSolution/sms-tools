@@ -1,6 +1,6 @@
 # TÀI LIỆU BÀN GIAO WEBSITE — SMART MOBILE SOLUTION (SMS)
 
-**Cập nhật lần cuối:** 18/11/2026  
+**Cập nhật lần cuối:** 23/11/2026  
 **Repository:** `SmartMobileSolution/sms-tools`  
 **Branch:** `main`  
 **Website:** https://smartmobilesolution.github.io/sms-tools/
@@ -22,7 +22,7 @@ Website là trang giới thiệu Smart Mobile Solution (SMS), danh sách ứng d
 - Tinh chỉnh giao diện dùng chung trong stylesheet: màu sắc xanh/teal, typography, card, navigation, trang policy và responsive cho màn hình nhỏ.
 - Thay tham chiếu logo công ty từ `company-logo.svg` sang `company-logo.png` trên các trang HTML. Người dùng đã tự commit ảnh PNG gốc và xóa SVG cũ; phần code đã được cập nhật để trỏ đến PNG.
 - Thay icon minh họa chữ K trên thẻ ứng dụng bằng ảnh tại `assets/images/kids-safe-icon.svg`.
-- Cập nhật Home card của Kids Safe để đồng bộ cấu trúc với App Locker: phân loại ANDROID · PARENTAL CONTROLS, tag, liên kết Google Play và Privacy Policy; thay nhãn trạng thái `V1` bằng `ANDROID`.
+- Đồng bộ Kids Safe card trên cả Home và Apps Directory: category `ANDROID · PARENTAL CONTROLS`, mô tả, tags `Kids Mode` / `Allowed apps` / `Parent PIN`, CTA Google Play và Privacy Policy, status `ANDROID`.
 - Hoàn thiện App Locker detail page: thêm gallery 5 ảnh PNG, responsive layout và lazy loading; bỏ link Privacy Policy dư ngay dưới nhóm CTA Hero.
 - Chỉnh App Locker hero icon: hiển thị trực tiếp icon, không có khung/card/nền/glow trang trí bên ngoài.
 - Xác minh GitHub Pages workflow #48 đã hoàn tất thành công cho commit `041a961de459a9656411134bcd18fe6aa7555a14` ngày 18/11/2026.
@@ -183,7 +183,7 @@ Sao chép prompt sau và gửi kèm file bàn giao này trong cuộc trò chuy�
 - Google Play URL supplied by the user: `https://play.google.com/store/apps/details?id=org.app.kidsmode` (package `org.app.kidsmode`).
 - Privacy Policy pages exist at `/privacy/kids-safe/` (English) and `/privacy/kids-safe/vi/` (Vietnamese).
 - The Home card was updated on 18/11/2026 to use the shared `.app-card` visual structure consistent with App Locker, with category text `ANDROID · PARENTAL CONTROLS`, the existing Kids Mode/Allowed apps/Parent PIN tags, a direct Google Play CTA, a Privacy Policy link and an `ANDROID` status label.
-- The Apps directory card is not identical to the Home card: it uses `ANDROID · TOOLS`, keeps the `V1` status label, and currently links to the Kids Safe Privacy Policy without a Google Play CTA. Do not assume the Apps directory was updated by the Home-card task.
+- The Apps directory card was aligned with the Home card on 23/11/2026: it now uses the same category, description, tags, Google Play CTA, Privacy Policy link and `ANDROID` status label. It retains the `standalone` modifier for the directory page layout.
 - Kids Safe V1 scope and privacy details are recorded in Section 5. Do not overstate remote control or cloud family-management functionality.
 
 ## 12. Shared navigation
@@ -244,3 +244,18 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 5. Do not claim that Kids Safe has a detail page: it currently has Home/App directory cards, Play Store URL and EN/VI Privacy Policy pages only.
 6. Do not claim that App Locker has a Vietnamese Privacy Policy: only the English page currently exists.
 7. Preserve the supplied PNG screenshot originals; any future WebP conversion should be additive or explicitly approved.
+
+
+## 15. Current verified source checkpoint — 23 November 2026
+
+- Updated `apps/index.html` so the Kids Safe card matches the Home card's approved content and calls to action.
+- The Apps Directory card retains `.app-card standalone`; the `standalone` modifier is a page-layout variant and was intentionally preserved.
+- Kids Safe card content is now aligned across Home and Apps Directory:
+  - Category: `ANDROID · PARENTAL CONTROLS`.
+  - Description: `Help manage which apps children can access when borrowing a parent's Android phone, with allowed-app lists and time-limited Kids Mode sessions.`
+  - Tags: `Kids Mode`, `Allowed apps`, `Parent PIN`.
+  - Google Play CTA: `https://play.google.com/store/apps/details?id=org.app.kidsmode`.
+  - Privacy Policy CTA: `../privacy/kids-safe/` from the Apps Directory.
+  - Status: `ANDROID`.
+- Source commit: `78449ab9f599ab6d3bdcc21bb56e7666510eb0a5` — `Align Kids Safe card in Apps directory with Home`.
+- D-01 — Kids Safe card content alignment: **source changes completed**. Public deployment verification should be checked against the GitHub Pages workflow before marking the live website as deployed.
