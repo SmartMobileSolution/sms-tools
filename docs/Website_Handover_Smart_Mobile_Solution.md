@@ -33,7 +33,8 @@ Website là trang giới thiệu Smart Mobile Solution (SMS), danh sách ứng d
 |---|---|
 | `index.html` | Trang chủ |
 | `apps/index.html` | Danh sách ứng dụng |
-| `apps/app-locker/index.html` | Trang giới thiệu App Locker: Lock Apps |\n| `apps/kids-safe/index.html` | Trang giới thiệu Kids Safe: Parent Control |
+| `apps/app-locker/index.html` | Trang giới thiệu App Locker: Lock Apps |
+| `apps/kids-safe/index.html` | Trang giới thiệu Kids Safe: Parent Control |
 | `privacy/index.html` | Danh mục Privacy Policy theo ứng dụng |
 | `privacy/app-locker/index.html` | Privacy Policy — App Locker (English) |
 | `contact/index.html` | Trang liên hệ |
