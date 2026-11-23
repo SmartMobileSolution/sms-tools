@@ -15,7 +15,7 @@ Website là trang giới thiệu Smart Mobile Solution (SMS), danh sách ứng d
 
 - Xây dựng/chỉnh sửa trang chủ giới thiệu Smart Mobile Solution, thông điệp thương hiệu, khu vực Our Apps và các liên kết điều hướng.
 - Xây dựng/chỉnh sửa trang danh sách ứng dụng tại `/apps/`, hiện có **Kids Safe: Parent Control** và **App Locker: Lock Apps**.
-- Tạo trang giới thiệu App Locker tại `/apps/app-locker/`.
+- Tạo trang giới thiệu App Locker tại `/apps/app-locker/` và Kids Safe tại `/apps/kids-safe/`.
 - Tạo Privacy Directory tại `/privacy/` và Privacy Policy tiếng Anh riêng cho App Locker tại `/privacy/app-locker/`.
 - Xây dựng/chỉnh sửa trang Contact với email hỗ trợ `help.mobilesolution@gmail.com`.
 - Soạn và cập nhật Privacy Policy cho Kids Safe: Parent Control bằng tiếng Anh và tiếng Việt.
@@ -33,7 +33,7 @@ Website là trang giới thiệu Smart Mobile Solution (SMS), danh sách ứng d
 |---|---|
 | `index.html` | Trang chủ |
 | `apps/index.html` | Danh sách ứng dụng |
-| `apps/app-locker/index.html` | Trang giới thiệu App Locker: Lock Apps |
+| `apps/app-locker/index.html` | Trang giới thiệu App Locker: Lock Apps |\n| `apps/kids-safe/index.html` | Trang giới thiệu Kids Safe: Parent Control |
 | `privacy/index.html` | Danh mục Privacy Policy theo ứng dụng |
 | `privacy/app-locker/index.html` | Privacy Policy — App Locker (English) |
 | `contact/index.html` | Trang liên hệ |
@@ -183,8 +183,8 @@ Sao chép prompt sau và gửi kèm file bàn giao này trong cuộc trò chuy�
 - There is currently no dedicated Kids Safe detail page at `/apps/kids-safe/`. Do not create one unless requested.
 - Google Play URL supplied by the user: `https://play.google.com/store/apps/details?id=org.app.kidsmode` (package `org.app.kidsmode`).
 - Privacy Policy pages exist at `/privacy/kids-safe/` (English) and `/privacy/kids-safe/vi/` (Vietnamese).
-- The Home card was updated on 18/11/2026 to use the shared `.app-card` visual structure consistent with App Locker, with category text `ANDROID · PARENTAL CONTROLS`, the existing Kids Mode/Allowed apps/Parent PIN tags, a direct Google Play CTA, a Privacy Policy link and an `ANDROID` status label.
-- The Apps directory card was aligned with the Home card on 23/11/2026: it now uses the same category, description, tags, Google Play CTA, Privacy Policy link and `ANDROID` status label. It retains the `standalone` modifier for the directory page layout.
+- The Home card uses the shared `.app-card` visual structure consistent with App Locker, with category text `ANDROID · PARENTAL CONTROLS`, the Kids Mode/Allowed apps/Parent PIN tags, an Explore Kids Safe detail link, Google Play CTA, Privacy Policy link and an `ANDROID` status label.
+- The Apps directory card uses the same category, description, tags, Explore Kids Safe detail link, Google Play CTA, Privacy Policy link and `ANDROID` status label. It retains the `standalone` modifier for the directory page layout.
 - Kids Safe V1 scope and privacy details are recorded in Section 5. Do not overstate remote control or cloud family-management functionality.
 
 ## 12. Shared navigation
@@ -296,3 +296,13 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 - Kids Safe icon remains unchanged at `assets/images/kids-safe-icon.svg`, per owner instruction.
 - No Kids Safe detail page has been created yet. These six images are ready for mapping when implementing `/apps/kids-safe/`; do not infer screenshot captions or features solely from filenames. Confirm screenshot contents before writing descriptive alt text/captions.
 - Current repository HEAD before this documentation update: `4fa5741708cd30ec6602f30121d10c9459601012` — `Update screenshot for kid-safe`.
+
+
+## 19. Kids Safe detail page — implementation checkpoint
+
+- Detail URL: `/apps/kids-safe/`.
+- The page uses the existing Kids Safe icon and maps all six owner-committed WebP screenshots from `assets/images/kids-safe/screenshots/screen-01.webp` through `screen-06.webp`.
+- Screenshot alt text and captions are intentionally neutral and numbered; do not infer the content of each image from its filename. Replace them with descriptive copy only after visually inspecting the actual screenshots.
+- Feature claims are limited to confirmed product scope: selecting allowed apps, time-limited Kids Mode sessions, Parent PIN, parent-owned device usage, and no remote management of a separate child device or cloud family pairing in V1.
+- The page links to Google Play and both English and Vietnamese Kids Safe Privacy Policy pages.
+- Home and Apps Directory Kids Safe cards now include an Explore Kids Safe link.
