@@ -23,7 +23,7 @@ Website là trang giới thiệu Smart Mobile Solution (SMS), danh sách ứng d
 - Thay tham chiếu logo công ty từ `company-logo.svg` sang `company-logo.png` trên các trang HTML. Người dùng đã tự commit ảnh PNG gốc và xóa SVG cũ; phần code đã được cập nhật để trỏ đến PNG.
 - Thay icon minh họa chữ K trên thẻ ứng dụng bằng ảnh tại `assets/images/kids-safe-icon.svg`.
 - Đồng bộ Kids Safe card trên cả Home và Apps Directory: category `ANDROID · PARENTAL CONTROLS`, mô tả, tags `Kids Mode` / `Allowed apps` / `Parent PIN`, CTA Google Play và Privacy Policy, status `ANDROID`.
-- Hoàn thiện App Locker detail page: thêm gallery 5 ảnh PNG, responsive layout và lazy loading; bỏ link Privacy Policy dư ngay dưới nhóm CTA Hero.
+- Hoàn thiện App Locker detail page: gallery 5 ảnh đã được chuyển sang WebP tối ưu, responsive layout và lazy loading; bỏ link Privacy Policy dư ngay dưới nhóm CTA Hero.
 - Chỉnh App Locker hero icon: hiển thị trực tiếp icon, không có khung/card/nền/glow trang trí bên ngoài.
 - Xác minh GitHub Pages workflow #48 đã hoàn tất thành công cho commit `041a961de459a9656411134bcd18fe6aa7555a14` ngày 18/11/2026.
 
@@ -44,7 +44,7 @@ Website là trang giới thiệu Smart Mobile Solution (SMS), danh sách ứng d
 | `assets/images/company-logo.png` | Logo công ty dạng PNG do người dùng upload/commit; HTML hiện trỏ đến file này |
 | `assets/images/kids-safe-icon.svg` | Icon Kids Safe đang được Home, Apps và Privacy Directory tham chiếu |
 | `assets/images/app-locker-icon.webp` | Icon App Locker dùng trên Home, Apps, Detail và Privacy Policy |
-| `assets/images/app-locker/screenshots/screen-01.png` … `screen-05.png` | Năm ảnh PNG gốc được dùng trong gallery trên App Locker detail page |
+| `assets/images/app-locker/screenshots/screen-01.webp` … `screen-05.webp` | Năm ảnh WebP tối ưu đang được App Locker detail page sử dụng |
 
 ### Các URL hiện có
 
@@ -265,7 +265,7 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 ## 16. Owner decisions and follow-up — 23 November 2026
 
 - D-03 — App Locker Privacy Policy language: **CLOSED / NOT REQUIRED**. The owner confirmed that a Vietnamese version is not needed. Keep the existing English-only policy; do not create a Vietnamese policy page or language switch for App Locker.
-- D-04 — App Locker screenshot gallery optimization: **IN PROGRESS / BLOCKED ON SOURCE IMAGE ACCESS IN THE EDITING RUNTIME**. The five original PNGs total 10,571,304 bytes. The intended safe implementation is additive WebP derivatives, quality-checked against each PNG, with the gallery switched to WebP only after the generated assets are available and verified. Preserve all five original PNGs. No image assets or gallery references have been changed yet.
+- D-04 — App Locker screenshot gallery optimization: **SOURCE MAPPING UPDATED**. Five `.webp` files now exist at `assets/images/app-locker/screenshots/screen-01.webp` through `screen-05.webp`, and `apps/app-locker/index.html` references them. The five files total 576,? bytes (verify from current tree before publishing any exact aggregate).
 
 
 ## 17. Pictarow: Photo to Table — Privacy Policy and Terms of Use
@@ -287,3 +287,12 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 - The Privacy Policy page was updated to distinguish platform behavior for local data, cloud sync/backup, advertising, purchases, third-party services, retention/deletion and device security. It retains the common policy URL and the owner's effective date.
 - Source implementation commits: `4f1e0c5` (original Privacy Policy), `13632cf` (Terms of Use), `a3c23e7` (Privacy Directory), `540aac1` (README), and `e99f86b` (platform-specific Privacy Policy update).
 - Legal content is based on owner-confirmed product behavior; publication is not a legal opinion or independent audit of app implementation. Before release, confirm production SDK configuration, data flows, subscription behavior, platform privacy disclosures and app UI match these statements, and consider qualified legal review of the documents.
+
+
+## 18. Screenshot asset update — 23 November 2026
+
+- Owner committed five App Locker screenshots as WebP under `assets/images/app-locker/screenshots/screen-01.webp` … `screen-05.webp`; the detail page gallery references those WebP paths.
+- Owner committed six Kids Safe screenshots as WebP under `assets/images/kids-safe/screenshots/screen-01.webp` … `screen-06.webp`.
+- Kids Safe icon remains unchanged at `assets/images/kids-safe-icon.svg`, per owner instruction.
+- No Kids Safe detail page has been created yet. These six images are ready for mapping when implementing `/apps/kids-safe/`; do not infer screenshot captions or features solely from filenames. Confirm screenshot contents before writing descriptive alt text/captions.
+- Current repository HEAD before this documentation update: `4fa5741708cd30ec6602f30121d10c9459601012` — `Update screenshot for kid-safe`.
