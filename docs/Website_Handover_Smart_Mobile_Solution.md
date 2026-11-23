@@ -307,3 +307,20 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 - Feature claims are limited to confirmed product scope: selecting allowed apps, time-limited Kids Mode sessions, Parent PIN, parent-owned device usage, and no remote management of a separate child device or cloud family pairing in V1.
 - The page links to Google Play and both English and Vietnamese Kids Safe Privacy Policy pages.
 - Home and Apps Directory Kids Safe cards now include an Explore Kids Safe link.
+
+
+## 20. Pictarow detail page — implementation checkpoint (23 November 2026)
+
+- Detail URL: `/apps/pictarow/`.
+- Added Pictarow to the Home page and Apps Directory, with links to its detail page, Privacy Policy and Terms of Use. No App Store download link is shown because a public App Store listing URL has not been supplied.
+- Added the owner-approved 1024×1024 Scan to Grid master as a web-optimized derivative at `assets/images/pictarow-icon.webp`. The original Library master PNG was not modified.
+- The detail page uses the approved Precision Workspace blue direction (`#2864E8`) and includes:
+  - Product positioning and Capture/Import → Recognize → Review/Edit → Save/Export workflow.
+  - Confirmed product behavior for one/multiple/no detected tables, cell correction, row/column actions, Undo/Redo, local Library, XLSX/CSV export and iPad side-by-side editing.
+  - Free allowance: 3 successful source-image recognition runs per calendar month; failed attempts do not count; one image is one run even if it contains multiple tables. Library, editing, XLSX and CSV remain available after the allowance is exhausted.
+  - Premium: unlimited recognition, optional iCloud Sync on iOS (opt-in/off by default), ad-free experience and monthly/yearly auto-renewing subscriptions with no free trial.
+  - Links to the existing Pictarow Privacy Policy and Terms of Use, plus the support email.
+- No screenshot gallery was added: the available App Store storyboard is a production plan and explicitly says its wireframe placeholders must not be presented as real product UI. The website repository currently contains no approved final Pictarow Release-build screenshots. Add a gallery only after real captures are supplied and visually checked.
+- No subscription price is advertised on the detail page because storefront-specific prices and final App Store Connect configuration remain open.
+- Pictarow remains an iOS/iPadOS product in this website entry; no Android store link or availability claim is added.
+- Legal/brand caution: Pictarow trademark clearance remains open. The page does not claim legal clearance or App Store availability.
