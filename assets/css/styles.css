@@ -119,3 +119,8 @@
 .pictarow-store-pricing strong{font:800 12px Manrope,sans-serif;color:#182230}
 .pictarow-store-pricing span{font-size:11px;line-height:1.45;color:#647184}
 @media(max-width:760px){.pictarow-store-pricing{grid-template-columns:1fr}.pictarow-store-button{flex:1;min-width:130px}}
+
+
+/* Pictarow promotional screenshot gallery keeps the complete artwork visible. */
+.pictarow-gallery .screenshot-card img{aspect-ratio:1320/2868;object-fit:contain;background:#eef3ff}
+.pictarow-gallery .screenshot-card figcaption{min-height:3.2em}

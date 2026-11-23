@@ -340,3 +340,25 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 - Exact public Android/iOS pricing remains OPEN until both store configurations and intended launch markets are confirmed. Do not publish the previously agreed iOS USD reference price as a universal website price; likewise do not infer Android prices.
 - Screenshot gallery remains OPEN. The owner will commit actual Pictarow screenshots and notify the website workflow; do not use the App Store storyboard wireframes as product screenshots.
 - This update preserves the static HTML/CSS/JS architecture; no frameworks or repository configuration were changed.
+
+
+## 22. Pictarow screenshot gallery — implementation checkpoint (23 November 2026)
+
+- Owner added five WebP assets in commit `c8876ae352e4366be62fb3c1066b00a4911b4468`:
+  - `assets/images/pictarow/screenshots/screen-01.webp`
+  - `assets/images/pictarow/screenshots/screen-02.webp`
+  - `assets/images/pictarow/screenshots/screen-03.webp`
+  - `assets/images/pictarow/screenshots/screen-04.webp`
+  - `assets/images/pictarow/screenshots/screen-05.webp`
+- All five images were opened and visually inspected. Each is a portrait WebP at **1320 × 2868**. Their combined repository size is **726,264 bytes** (about 0.73 MB decimal).
+- Added a five-image gallery to `/apps/pictarow/`, immediately after the Hero and before the workflow section:
+  1. Home screen with Scan a table, Import image, remaining Free recognition allowance and recent tables.
+  2. Source review screen with the original printed catalog and an XLSX table preview.
+  3. Table Editor with cells highlighted for review and a notice that 12 cells may need a quick review.
+  4. Library/search screen with saved tables and an iCloud Sync information panel.
+  5. Export sheet offering XLSX and CSV, with sample exported file previews.
+- Each image has descriptive alt text, a concise caption, explicit intrinsic dimensions, lazy loading and asynchronous decoding. CSS preserves the complete 1320:2868 artwork rather than cropping the screenshot headline or UI.
+- The gallery is based on the actual owner-committed artwork; no App Store storyboard wireframes or generated placeholders were used.
+- README project structure, Pictarow gallery status and asset inventory were updated to match the current source.
+- Store CTAs remain non-clickable `Coming soon` labels until the owner supplies the public Google Play and App Store listing URLs. Platform-specific pricing guidance remains as documented in Section 21.
+- The prior note in Section 21 that the screenshot gallery remained OPEN is superseded by this completed implementation checkpoint; future screenshot replacement/addition should only happen when the owner supplies new assets and asks for the update.
