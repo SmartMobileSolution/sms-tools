@@ -265,7 +265,7 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 ## 16. Owner decisions and follow-up — 23 November 2026
 
 - D-03 — App Locker Privacy Policy language: **CLOSED / NOT REQUIRED**. The owner confirmed that a Vietnamese version is not needed. Keep the existing English-only policy; do not create a Vietnamese policy page or language switch for App Locker.
-- D-04 — App Locker screenshot gallery optimization: **SOURCE MAPPING UPDATED**. Five `.webp` files now exist at `assets/images/app-locker/screenshots/screen-01.webp` through `screen-05.webp`, and `apps/app-locker/index.html` references them. The five files total 576,? bytes (verify from current tree before publishing any exact aggregate).
+- D-04 — App Locker screenshot gallery optimization: **SOURCE MAPPING UPDATED**. Five `.webp` files now exist at `assets/images/app-locker/screenshots/screen-01.webp` through `screen-05.webp`, and `apps/app-locker/index.html` references them. The five files total 577,032 bytes (about 0.58 MB decimal).
 
 
 ## 17. Pictarow: Photo to Table — Privacy Policy and Terms of Use
