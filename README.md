@@ -6,7 +6,7 @@ Official static website for **Smart Mobile Solution (SMS)**, hosted with GitHub 
 - **Repository:** https://github.com/SmartMobileSolution/sms-tools
 - **Default branch:** `main`
 - **Support:** help.mobilesolution@gmail.com
-- **Last documented:** 23 November 2026
+- **Last documented:** 24 November 2026
 
 ## Website pages
 
