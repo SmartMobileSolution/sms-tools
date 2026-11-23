@@ -387,3 +387,19 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 - Kids Safe and App Locker keep their clickable Google Play tiles and exact owner-supplied destinations; no App Store tile was added for either Android-only app.
 - Updated shared store-button CSS for a single-row icon/label/status layout, including compact and responsive variants.
 - Files changed: `index.html`, `apps/index.html`, `apps/pictarow/index.html`, `assets/css/styles.css`, `README.md`, and this handoff document.
+
+
+## 25. Official store badge artwork applied across all apps (23 November 2026)
+
+- The owner committed two badge assets:
+  - Google Play: `assets/images/googleplay-badge.webp`.
+  - App Store: `assets/images/appstore-badge.svg`.
+- Replaced the manually recreated SVG logo icons, store labels and subtitles with the supplied image assets only. The original badge files are referenced directly and remain unchanged.
+- Applied the badges to Home and Apps Directory cards and the Hero/download areas of all three app detail pages:
+  - Pictarow: displays Google Play and App Store badges as non-clickable images until official public listing URLs are supplied. No “Coming soon” text is shown.
+  - Kids Safe: displays only its Google Play badge, linked to `https://play.google.com/store/apps/details?id=org.app.kidsmode`.
+  - App Locker: displays only its Google Play badge, linked to `https://play.google.com/store/apps/details?id=org.app.secure.locker`.
+- Kids Safe and App Locker remain Android-only; no App Store badge is shown for these two apps.
+- Updated shared CSS for consistent badge dimensions and spacing. The Google Play WebP has transparent vertical padding; its display box crops those transparent margins without modifying the source asset.
+- This section supersedes earlier notes in Sections 23–24 about manually recreated icon tiles and Pictarow “Coming soon” labels.
+- Files changed: `index.html`, `apps/index.html`, `apps/pictarow/index.html`, `apps/kids-safe/index.html`, `apps/app-locker/index.html`, `assets/css/styles.css`, `README.md`, and this handoff document.
