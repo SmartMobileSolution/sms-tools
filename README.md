@@ -83,13 +83,13 @@ This is a lightweight static website built with HTML, CSS and JavaScript. There 
 
 ## Current implementation notes
 
-- The Home page lists Pictarow, Kids Safe and App Locker using the shared `.app-card` styling. Pictarow shows Android and iOS store CTA placeholders pending public listing URLs.
+- The Home page lists Pictarow, Kids Safe and App Locker using the shared `.app-card` styling. Pictarow shows Android and iOS store CTA placeholders pending public listing URLs; the Android-only Kids Safe and App Locker cards each show a clickable Google Play tile.
 - The Apps directory lists Pictarow, Kids Safe and App Locker. All three have dedicated detail pages.
 - Pictarow detail is at `/apps/pictarow/`. It uses the approved 1024px Scan to Grid master exported as `assets/images/pictarow-icon.webp`, describes the confirmed product workflow and Free/Premium limits, and links to the existing Privacy Policy and Terms of Use. Google Play and App Store CTA placeholders are visible as “Coming soon” until public listing URLs are supplied.
 - Pictarow detail includes a five-image promotional gallery using owner-committed WebP files `assets/images/pictarow/screenshots/screen-01.webp` through `screen-05.webp`. The images are 1320 × 2868 each, use lazy loading, and preserve their complete portrait artwork without cropping.
 - App Locker's detail page contains a five-image promotional screenshot gallery. The gallery now uses optimized WebP files `screen-01.webp` through `screen-05.webp` under `assets/images/app-locker/screenshots/`, with lazy loading and responsive columns.
 - App Locker's hero icon is displayed directly without an outer decorative card, frame, background panel, or glow layer.
-- The App Locker Google Play CTA and the Kids Safe Home Google Play link open their respective supplied Play Store URLs in a new tab.
+- The Kids Safe and App Locker cards on both Home and the Apps directory use matching compact Google Play tiles that open their supplied Play Store URLs in a new tab. These two apps are Android-only; no App Store CTA is shown. Their detail-page Google Play CTAs remain unchanged.
 - Each app has its own Privacy Policy URL. Do not copy one app's policy to another app without verifying that app's actual data practices and SDKs.
 
 ## Extending the website

@@ -124,3 +124,9 @@
 /* Pictarow promotional screenshot gallery keeps the complete artwork visible. */
 .pictarow-gallery .screenshot-card img{aspect-ratio:1320/2868;object-fit:contain;background:#eef3ff}
 .pictarow-gallery .screenshot-card figcaption{min-height:3.2em}
+
+
+/* Store tiles used by Android-only app cards on Home and the Apps directory. */
+.app-card-store-link{color:#182230;text-decoration:none;cursor:pointer;transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+.app-card-store-link:hover{border-color:#9fb7de;box-shadow:0 6px 16px rgba(24,34,48,.1);transform:translateY(-1px)}
+.app-card-store-link:focus-visible{outline:3px solid rgba(40,100,232,.35);outline-offset:3px}

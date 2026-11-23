@@ -362,3 +362,16 @@ This section is the latest operational snapshot and supersedes earlier notes whe
 - README project structure, Pictarow gallery status and asset inventory were updated to match the current source.
 - Store CTAs remain non-clickable `Coming soon` labels until the owner supplies the public Google Play and App Store listing URLs. Platform-specific pricing guidance remains as documented in Section 21.
 - The prior note in Section 21 that the screenshot gallery remained OPEN is superseded by this completed implementation checkpoint; future screenshot replacement/addition should only happen when the owner supplies new assets and asks for the update.
+
+
+## 23. Android app cards — Google Play store tiles (23 November 2026)
+
+- Updated both the Home page (`index.html`) and Apps Directory (`apps/index.html`) so the **Kids Safe: Parent Control** and **App Locker: Lock Apps** cards show a dedicated compact Google Play tile, visually consistent with the Pictarow store availability tiles.
+- The tiles are clickable links and open Google Play in a new tab:
+  - Kids Safe: `https://play.google.com/store/apps/details?id=org.app.kidsmode` (package `org.app.kidsmode`).
+  - App Locker: `https://play.google.com/store/apps/details?id=org.app.secure.locker` (package `org.app.secure.locker`).
+- Both apps are Android-only. Their cards show Google Play only; no App Store tile or iOS availability claim was added.
+- Existing detail-page Google Play CTAs are unchanged. Pictarow's Google Play and App Store tiles remain non-clickable **Coming soon** placeholders until public listing URLs are provided.
+- Added focused hover and keyboard-focus styling for clickable card store tiles in `assets/css/styles.css`; existing responsive card layout and static HTML/CSS/JS architecture are preserved.
+- Files changed: `index.html`, `apps/index.html`, `assets/css/styles.css`, `README.md`, and this handoff document.
+- This section supersedes earlier wording that described the Kids Safe card's store action as an inline text CTA. Both Android app cards now use the dedicated store-tile treatment on both listing surfaces.
